@@ -1,4 +1,4 @@
-/*! angular-google-plus - v0.1.3 2015-08-27 */
+/*! angular-google-plus - v0.1.3 2017-03-14 */
 /**
  * googleplus module
  */
@@ -129,6 +129,12 @@ angular.module("googleplus", []).provider("GooglePlus", [ function() {
         };
         f.prototype.setToken = function(a) {
             return gapi.auth.setToken(a);
+        };
+        f.prototype.getScopes = function() {
+            return a.scopes;
+        };
+        f.prototype.setScopes = function(b) {
+            a.scopes = b;
         };
         f.prototype.logout = function() {
             gapi.auth.signOut();
