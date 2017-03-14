@@ -165,6 +165,14 @@ angular.module('googleplus', []).
         return gapi.auth.setToken(token);
       };
 
+      NgGooglePlus.prototype.getScopes = function() {
+        return options.scopes;
+      };
+
+      NgGooglePlus.prototype.setScopes = function(scopes) {
+        options.scopes = scopes;
+      };
+
       NgGooglePlus.prototype.logout =  function () {
         gapi.auth.signOut();
       };

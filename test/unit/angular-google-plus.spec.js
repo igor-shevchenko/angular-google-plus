@@ -85,9 +85,14 @@ describe('googlePlus Module specs', function () {
       expect(GooglePlusProvider.getScopes()).toBe('https://www.googleapis.com/auth/plus.login');
     });
 
-    it('working getter / setter for status', function () {
+    it('working getter / setter for scopes', function () {
       GooglePlusProvider.setScopes('https://www.googleapis.com/auth/plus.me');
       expect(GooglePlusProvider.getScopes()).toBe('https://www.googleapis.com/auth/plus.me');
+    });
+
+    it('working getter / setter for scopes in service', function () {
+      googlePlus.setScopes('https://www.googleapis.com/auth/plus.me');
+      expect(googlePlus.getScopes()).toBe('https://www.googleapis.com/auth/plus.me');
     });
   });
 });
